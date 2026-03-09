@@ -1,193 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smith Digital Media | Video Marketing Specialist</title>
-    <style>
-        :root {
-            --primary: #007bff;
-            --dark: #000000;
-            --card-bg: #111111;
-            --accent: #ff4757;
-            --text-main: #f4f4f4;
-            --text-dim: #b3b3b3;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smith Digital Media | Video Marketing Specialist</title>
 
-        /* Base Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-        html { scroll-behavior: smooth; }
-        body { background-color: var(--dark); color: var(--text-main); line-height: 1.6; }
+<style>
 
-        /* Navigation */
-        nav { 
-            background: rgba(0,0,0,0.95); padding: 1rem 5%; 
-            display: flex; justify-content: space-between; align-items: center; 
-            position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222;
-        }
-        .nav-logo { font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; color: #fff; text-decoration: none; }
-        .nav-links a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+*{
+box-sizing:border-box;
+}
 
-        /* Hero Section */
-        .hero { 
-            height: 90vh; display: flex; flex-direction: column; justify-content: center; 
-            align-items: center; text-align: center; padding: 0 20px;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
-        }
-        .hero-logo { width: 180px; margin-bottom: 30px; }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 20px; }
-        .hero p { max-width: 650px; font-size: 1.2rem; color: var(--text-dim); margin-bottom: 30px; }
+html{
+scroll-behavior:smooth;
+}
 
-        /* Stats Bar */
-        .stats-bar { background: var(--primary); color: white; padding: 30px 5%; text-align: center; font-weight: 600; }
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#000;
+color:#fff;
+line-height:1.6;
+}
 
-        /* Section Commons */
-        section { padding: 100px 5%; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+a{
+text-decoration:none;
+color:inherit;
+}
 
-        /* What To Expect */
-        .expect-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .step-card { background: var(--card-bg); padding: 40px; border-radius: 15px; border: 1px solid #222; position: relative; }
-        .step-num { color: var(--primary); font-size: 0.9rem; font-weight: 800; letter-spacing: 2px; margin-bottom: 15px; display: block; }
-        .step-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 30px;
+background:#050505;
+border-bottom:1px solid #222;
+position:sticky;
+top:0;
+z-index:1000;
+}
 
-        /* Video Gallery */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        .video-box { 
-            background: #1a1a1a; aspect-ratio: 9/16; border-radius: 15px; 
-            overflow: hidden; border: 1px solid #333; transition: transform 0.3s ease;
-            display: flex; align-items: center; justify-content: center; color: #555;
-        }
-        .video-box:hover { transform: translateY(-10px); border-color: var(--primary); }
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+}
 
-        /* Pricing */
-        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-        .price-card { background: var(--card-bg); padding: 50px 30px; border-radius: 20px; text-align: center; border: 1px solid #222; }
-        .price-card.featured { border: 2px solid var(--primary); position: relative; transform: scale(1.05); }
-        .badge { background: var(--accent); color: white; padding: 5px 15px; border-radius: 20px; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 0.8rem; font-weight: bold; }
-        .price-val { font-size: 3.5rem; font-weight: 800; margin: 20px 0; color: #fff; }
+.brand img{
+width:55px;
+}
 
-        /* Buttons */
-        .btn { 
-            padding: 16px 35px; border-radius: 8px; font-weight: 700; text-decoration: none; 
-            display: inline-block; transition: 0.3s; cursor: pointer; border: none;
-        }
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-free { background: var(--accent); color: white; }
-        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+.brand-text h1{
+margin:0;
+font-size:22px;
+letter-spacing:1px;
+}
 
-        /* Contact Section */
-        #contact { background: #0a0a0a; text-align: center; }
-        .contact-info { margin-top: 30px; font-size: 1.2rem; }
-        .contact-info a { color: var(--primary); text-decoration: none; font-weight: bold; }
+.brand-text p{
+margin:0;
+color:#aaa;
+font-size:13px;
+}
 
-        footer { padding: 50px 5%; text-align: center; border-top: 1px solid #222; color: #666; font-size: 0.9rem; }
+.nav{
+display:flex;
+gap:20px;
+}
 
-        @media (max-width: 768px) {
-            .price-card.featured { transform: scale(1); margin: 20px 0; }
-        }
-    </style>
+.nav a{
+color:#ccc;
+font-size:15px;
+}
+
+.nav a:hover{
+color:#ff3b3b;
+}
+
+.hero{
+
+text-align:center;
+padding:120px 20px 90px;
+
+background:
+linear-gradient(rgba(0,0,0,.80), rgba(0,0,0,.90)),
+url("hero.png");
+
+background-size:cover;
+background-position:center;
+
+border-bottom:1px solid #222;
+
+}
+
+.hero h2{
+font-size:52px;
+max-width:900px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:20px;
+color:#ccc;
+}
+
+.hero-buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 25px;
+margin:10px;
+border-radius:6px;
+font-weight:bold;
+}
+
+.btn-primary{
+background:#ff3b3b;
+color:#fff;
+}
+
+.btn-secondary{
+border:1px solid #555;
+background:#111;
+}
+
+section{
+padding:70px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+font-size:34px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.video-container{
+max-width:900px;
+margin:auto;
+}
+
+iframe{
+width:100%;
+height:500px;
+border:none;
+}
+
+.card-section{
+background:#111;
+padding:40px;
+border-radius:10px;
+}
+
+.card-section ul{
+list-style:none;
+padding:0;
+}
+
+.card-section li{
+padding:12px 0;
+border-bottom:1px solid #222;
+}
+
+.pricing{
+text-align:center;
+}
+
+.price-grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.price-box{
+background:#111;
+padding:30px;
+border-radius:10px;
+min-width:200px;
+}
+
+.price-box h3{
+margin:0;
+}
+
+.price-box p{
+font-size:24px;
+color:#ff3b3b;
+}
+
+.about{
+background:#111;
+padding:40px;
+border-radius:10px;
+}
+
+.cta{
+text-align:center;
+background:#111;
+padding:60px 20px;
+border-top:1px solid #222;
+border-bottom:1px solid #222;
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #222;
+color:#777;
+}
+
+</style>
 </head>
+
 <body>
 
-    <nav>
-        <a href="#" class="nav-logo">SMITH DIGITAL MEDIA</a>
-        <div class="nav-links">
-            <a href="#expect">Our Process</a>
-            <a href="#portfolio">Work</a>
-            <a href="#pricing">Pricing</a>
-            <a href="mailto:smithdigitalmediavideos@gmail.com">Contact</a>
-        </div>
-    </nav>
+<div class="topbar">
 
-    <header class="hero">
-        <img src="sdm-badge-logo.png" alt="SDM Badge" class="hero-logo">
-        <h1>Stop Being Invisible.</h1>
-        <p>We help local businesses attract more customers with high-impact, professional social media videos for TikTok, Reels, and Facebook.</p>
-        <a href="#contact" class="btn btn-free">Claim Your FREE Sample Video</a>
-    </header>
+<div class="brand">
+<img src="logo.png">
+<div class="brand-text">
+<h1>SMITH DIGITAL MEDIA</h1>
+<p>Video Marketing Specialist</p>
+</div>
+</div>
 
-    <div class="stats-bar">
-        89% of businesses report increased brand awareness and sales after using video marketing.
-    </div>
+<div class="nav">
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
 
-    <section id="expect">
-        <h2 class="section-title">What to Expect</h2>
-        <div class="expect-grid">
-            <div class="step-card">
-                <span class="step-num">STEP 01</span>
-                <h3>On-Site Filming</h3>
-                <p>We do a quick visit to your business during normal work hours. No disruption—we just capture the magic of what you do.</p>
-            </div>
-            <div class="step-card">
-                <span class="step-num">STEP 02</span>
-                <h3>Professional Editing</h3>
-                <p>We handle the pacing, color correction, and custom background music to ensure your content looks premium.</p>
-            </div>
-            <div class="step-card">
-                <span class="step-num">STEP 03</span>
-                <h3>Ready to Post</h3>
-                <p>Receive finished videos optimized for social media. Just hit "Post" and start showcasing your work.</p>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <section id="portfolio" style="background: #050505;">
-        <h2 class="section-title">See Our Work</h2>
-        <div class="gallery-grid">
-            <div class="video-box">Sample: Local Shop</div>
-            <div class="video-box">Sample: Service Industry</div>
-            <div class="video-box">Sample: Product Promo</div>
-            <div class="video-box">Sample: Behind the Scenes</div>
-        </div>
-    </section>
+<section class="hero">
 
-    <section id="pricing">
-        <h2 class="section-title">Simple, Local Pricing</h2>
-        <div class="price-grid">
-            <div class="price-card">
-                <h3>The Trial</h3>
-                <div class="price-val">$0</div>
-                <p>1 Free Sample Video</p>
-                <p>Social Media Ready</p>
-                <p>No Commitment</p>
-                <a href="#contact" class="btn btn-primary" style="margin-top:20px;">Try It Free</a>
-            </div>
-            <div class="price-card featured">
-                <div class="badge">MOST POPULAR</div>
-                <h3>Starter Pack</h3>
-                <div class="price-val">$100</div>
-                <p><strong>3 Professional Videos</strong></p>
-                <p>Strategic Content Mix</p>
-                <p>On-Site Filming Included</p>
-                <a href="#contact" class="btn btn-primary" style="margin-top:20px;">Get Started</a>
-            </div>
-            <div class="price-card">
-                <h3>Growth Pack</h3>
-                <div class="price-val">$200</div>
-                <p><strong>7 Professional Videos</strong></p>
-                <p>Full Month of Content</p>
-                <p>Priority Delivery</p>
-                <a href="#contact" class="btn btn-primary" style="margin-top:20px;">Scale Up</a>
-            </div>
-        </div>
-    </section>
+<h2>Bring More Customers to Your Business With Video</h2>
 
-    <section id="contact">
-        <h2 class="section-title">Ready to Stand Out?</h2>
-        <p>No obligation. No commitment. Just high-quality video for your business.</p>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:smithdigitalmediavideos@gmail.com">smithdigitalmediavideos@gmail.com</a></p>
-            <br>
-            <a href="mailto:smithdigitalmediavideos@gmail.com" class="btn btn-free">Email Us for Your Free Video</a>
-        </div>
-    </section>
+<p>
+Short promotional videos for local businesses in Middleton, Tennessee and surrounding areas.
+</p>
 
-    <footer>
-        <p>&copy; 2024 Smith Digital Media | smithdigitalmedia.work</p>
-        <p style="margin-top:10px; font-size: 0.7rem;">Video Marketing Specialist</p>
-    </footer>
+<div class="hero-buttons">
+<a href="#contact" class="btn btn-primary">Get My Free Sample Video</a>
+<a href="mailto:smithdigitalmediavideos@gmail.com" class="btn btn-secondary">Email Smith Digital Media</a>
+</div>
+
+</section>
+
+<section>
+
+<h2>Sample Promotional Video</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/k5IlSNlHF04"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="card-section">
+
+<h2>What You Get</h2>
+
+<ul>
+
+<li>Short promotional videos for your business</li>
+<li>Quick on-site filming visit (10–20 minutes)</li>
+<li>Professional editing</li>
+<li>Custom background music</li>
+<li>Video delivered ready to post on social media</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="pricing" class="pricing">
+
+<h2>Simple Pricing</h2>
+
+<p>The first promotional video is completely FREE with no obligation.</p>
+
+<div class="price-grid">
+
+<div class="price-box">
+<h3>1 Video</h3>
+<p>$50</p>
+</div>
+
+<div class="price-box">
+<h3>3 Videos</h3>
+<p>$100</p>
+</div>
+
+<div class="price-box">
+<h3>7 Videos</h3>
+<p>$200</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="about">
+
+<h2>About Smith Digital Media</h2>
+
+<p>
+At Smith Digital Media, we believe every business has a story worth telling.
+Our mission is simple: help businesses grow by using the power of video.
+</p>
+
+<p>
+We specialize in creating short, powerful marketing videos designed for social media, websites, and digital advertising.
+</p>
+
+<p>
+Because sometimes all it takes is one great video to turn viewers into customers.
+</p>
+
+<p><strong>Smith Digital Media</strong><br>
+Small Videos. Big Results.</p>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Ready to bring more customers to your business?</h2>
+
+<p>
+Get your 100% free sample promotional video today. No obligation. No contract.
+</p>
+
+<a href="#contact" class="btn btn-primary">Claim My Free Sample Video</a>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Get Your Free Sample Video</h2>
+
+<p>
+Ready to start bringing in more customers? Contact Smith Digital Media to schedule your free promotional video.
+</p>
+
+<p><strong>Email:</strong> smithdigitalmediavideos@gmail.com</p>
+
+<p><strong>Serving:</strong> Middleton, Tennessee and surrounding areas</p>
+
+</section>
+
+<footer>
+
+© 2026 Smith Digital Media
+
+</footer>
 
 </body>
 </html>
